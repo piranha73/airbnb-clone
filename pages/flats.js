@@ -9,7 +9,7 @@ const Flats = props => {
 }
 
 export function getServerSideProps () {
-  const flats = flatsController.flats()
+  const flats = flatsController.all()
   return {
     props: {flats}
   }
