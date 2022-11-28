@@ -1,11 +1,18 @@
-export default function Flats (props) {
+import flatsController from "../controllers/flatsController"
+
+const Flats = props => {
   return (
-    <>
-      <h3>Flats</h3>
-      <ul>
-        <li>im a flat</li>
-      </ul>
-    </>
+    <ul>
+      {props.flats}
+    </ul>
   )
 }
 
+export function getServerSideProps () {
+  const flats = flatsController.flats()
+  return {
+    props: {flats}
+  }
+}
+
+export default Flats
