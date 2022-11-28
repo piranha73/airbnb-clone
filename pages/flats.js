@@ -7,7 +7,7 @@ const Flats = props => {
 }
 
 export function getServerSideProps () {
-  const flats = ["flat1", "flat2"]
+  const flats = ["flat1", "flat2", "flat3"]
   return {
     props: {flats}
   }
