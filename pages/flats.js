@@ -1,3 +1,5 @@
+import flatsController from "../controllers/flatsController"
+
 const Flats = props => {
   return (
     <ul>
@@ -7,7 +9,7 @@ const Flats = props => {
 }
 
 export function getServerSideProps () {
-  const flats = ["flat1", "flat2", "flat3"]
+  const flats = flatsController.flats()
   return {
     props: {flats}
   }
